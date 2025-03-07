@@ -162,3 +162,9 @@ cython_debug/
 *.sql 
 *.db 
 *.env
+
+# firebase
+src/services/firebase-services.json
+
+# notes
+notes.md

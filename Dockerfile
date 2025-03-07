@@ -8,7 +8,7 @@ COPY . .
 RUN apk add --no-cache gcc musl-dev
 
 # Install Python dependencies
-RUN pip install --no-cache-dir poetry
+RUN pip install --upgrade pip --no-cache-dir poetry poetry-plugin-export
 RUN poetry export --without-hashes --without dev -f requirements.txt -o requirements.txt
 RUN pip install -r requirements.txt
 

@@ -38,10 +38,14 @@ FIREBASE_PRIVATE_KEY = ""  # Firebase private key (ensure to keep it secure).
 FIREBASE_CLIENT_EMAIL = ""  # Firebase client email for authentication.
 FIREBASE_PRIVATE_KEY_ID = ""  # Firebase private key ID for authentication.
 FIREBASE_CLIENT_X509_CERT_URL = ""  # Firebase client X.509 certificate URL for authentication.
+FIREBASE_UNIVERSE_DOMAIN = "" # Firebase universe domain for authentication.
+FIREBASE_AUTH_URI = "" # Firebase auth URI for authentication.
+FIREBASE_TOKEN_URI = "" # Firebase token URI for authentication.
+FIREBASE_TYPE = "" # Firebase account type for authentication.
 ```
 
-## Launching the application with Docker.
+## Launching the application with Docker (development).
 
-- Install `docker` and `docker-compose`: Before starting, you must have `docker` and `docker-compose` installed on your machine. You can find installation instructions for both software in the Docker documentation.
-- Use the command `docker-compose --env-file .env up -d --remove-orphans` to run the bifrost application easily.
-- Use the command `poetry run start` to run application.
+- Install `docker`.
+- Run `docker build -t satoshi-quiz-saas .`.
+- Then run `docker run -d -p 3214:80 --env-file .env satoshi-quiz-saas`.
